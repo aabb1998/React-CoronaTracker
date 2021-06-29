@@ -1,0 +1,187 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	margin: 0 100px 0 100px;
+}
+
+.main-section {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.main-left {
+	flex: 0.7;
+	margin-top: 30px;
+}
+
+.cover {
+	height: 500px;
+	position: relative;
+	top: 30px;
+	right: 70px;
+	overflow: hidden;
+}
+
+.alert-btn {
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+.symptoms-btn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #eb5757;
+	width: 150px;
+	height: 35px;
+	border-radius: 20px;
+	margin: auto;
+	text-align: center;
+	box-shadow: 0 4px 2px 2px gray;
+	margin-top: 25px;
+}
+
+.symptoms-btn:hover {
+	cursor: pointer;
+	box-shadow: 0 4px 2px 3px gray;
+}
+
+.symptoms-btn span {
+	font-size: 11px;
+	color: white;
+}
+
+.main-text span {
+	color: #828282;
+}
+
+.main-text h2 {
+	font-size: 50px;
+	line-height: 40px;
+}
+
+.global-stats {
+	background-color: #f2f2f2;
+	opacity: 0.8;
+	width: 100%;
+	height: 200px;
+	border-radius: 10px;
+	z-index: 100;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.stat {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.stat h3 {
+	font-size: 25px;
+}
+
+.stat span {
+	color: #828282;
+	font-weight: bolder;
+}
+
+.stat img {
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 1043px) {
+	.global-stats {
+		margin-top: 70px;
+		height: 160px;
+	}
+
+	.stat {
+		width: 100px;
+		text-align: center;
+	}
+
+	.stat h3 {
+		font-size: 20px;
+	}
+	.stat span {
+		font-size: 10px;
+	}
+
+	.cover {
+		height: 400px;
+		right: inherit;
+	}
+}
+
+@media screen and (max-width: 677px) {
+	.global-stats {
+		margin-top: 70px;
+		height: 120px;
+	}
+
+	.cover {
+		height: 200px;
+		right: inherit;
+		top: 100px;
+	}
+
+	.stat {
+		width: 60px;
+		text-align: center;
+	}
+
+	.stat h3 {
+		font-size: 13px;
+	}
+	.stat span {
+		font-size: 8px;
+	}
+
+	.stat img {
+		height: 20px;
+	}
+}
+
+@media screen and (max-width: 559px) {
+	.global-stats {
+		margin-top: 50px;
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		margin-bottom: 40px;
+		padding-bottom: 30px;
+	}
+
+	.stat {
+		width: 60px;
+		text-align: center;
+	}
+
+	.stat h3 {
+		font-size: 13px;
+	}
+	.stat span {
+		font-size: 8px;
+	}
+
+	.stat img {
+		height: 20px;
+	}
+
+	.cover {
+		display: none;
+	}
+	.main-text h2 {
+		font-size: 35px;
+		text-align: center;
+	}
+}
