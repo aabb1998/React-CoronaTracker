@@ -1,0 +1,140 @@
+.header-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 15px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+	color: #828282;
+	font-size: 14px;
+}
+
+.navigation a:hover {
+	border-bottom: 3px solid grey;
+	margin-top: 5px;
+}
+
+.navigation {
+	display: flex;
+	flex: 0.7;
+	justify-content: flex-end;
+}
+
+.navigation ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.navigation ul li {
+	list-style: none;
+	justify-content: space-between;
+	margin-left: 100px;
+}
+
+.emergency-section {
+	border: 2px solid red;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.emergency-section span {
+	font-size: 12px;
+	color: red;
+	font-weight: bolder;
+}
+
+.emergency-phone {
+	margin-right: 7px;
+	border: 2px solid red;
+	border-radius: 10px;
+	height: 24px;
+}
+
+.emergency-section:hover {
+	box-shadow: 0 4px 2px -2px red;
+	cursor: pointer;
+}
+
+.logo {
+	height: 45px;
+	cursor: pointer;
+}
+
+.menu-btn {
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	cursor: pointer;
+}
+
+.emergency {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 1043px) {
+	.navigation {
+		display: none !important;
+	}
+	.menu-btn {
+		display: flex;
+	}
+
+	.emergency-section {
+		height: 15px;
+	}
+}
+
+@media screen and (max-width: 589px) {
+	.navigation {
+		display: none !important;
+	}
+	.menu-btn {
+		display: flex;
+	}
+
+	.emergency-section {
+		padding: 10px;
+		height: 10px;
+		margin-right: 10px;
+	}
+
+	.emergency-section span {
+		font-size: 9px;
+	}
+
+	.emergency-phone {
+		height: 20px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.emergency-section {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 260px) {
+	.header-container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu-btn {
+		height: 20px;
+	}
+}
