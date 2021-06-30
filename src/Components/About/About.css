@@ -1,0 +1,94 @@
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.text h3 {
+	font-size: 30px;
+}
+
+.text p {
+	font-size: 15px;
+}
+
+.text {
+	text-align: center;
+}
+
+.top-section {
+	margin-top: 47px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-section {
+	max-width: 700px;
+	margin-left: 40px;
+}
+
+.about-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	max-width: 400px;
+	margin: auto;
+}
+
+.live-data {
+	background-color: #f2f2f2 !important;
+}
+
+.live-data span {
+	color: black;
+	font-weight: bolder;
+}
+
+.bottom-section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.video-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #f2f2f2;
+	height: 240px;
+	border-radius: 13px;
+	flex-wrap: wrap;
+}
+
+.video {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.video-main-img {
+	width: 120px;
+	border-radius: 5px;
+	border: 3px solid gray;
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+
+.youtube-img {
+	width: 20px;
+}
+
+.video p {
+	font-size: 12px;
+	margin-top: 27px;
+}
+
+.video-main-img:hover {
+	transform: translateY(10px);
+}

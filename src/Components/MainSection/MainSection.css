@@ -109,6 +109,7 @@
 	.global-stats {
 		margin-top: 70px;
 		height: 160px;
+		margin-bottom: 70px;
 	}
 
 	.stat {
@@ -227,8 +228,22 @@
 	.main-left {
 		width: 100%;
 	}
+
+	.main {
+		margin: 0 50px 0 50px;
+	}
 }
 
 .global-affected {
 	color: rebeccapurple;
+}
+
+.disclaimer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	bottom: -100px;
+	text-align: center;
+	color: #828282;
 }

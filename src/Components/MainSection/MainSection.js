@@ -96,6 +96,9 @@ function MainSection({ covidData, load }) {
 					<img src={globalImage} alt="" />
 				</div>
 			</div>
+			<div className="disclaimer">
+				<p>* All live statistics updated every 15 minutes.</p>
+			</div>
 		</div>
 	);
 }
