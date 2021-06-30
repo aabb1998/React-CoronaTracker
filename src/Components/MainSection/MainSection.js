@@ -7,8 +7,15 @@ import affectedImg from "../../Assets/MainSectionAssets/shipping 1.png";
 import confirmedImg from "../../Assets/MainSectionAssets/confirmation 1.png";
 import recoveredImg from "../../Assets/MainSectionAssets/recovered 1.png";
 import globalImage from "../../Assets/MainSectionAssets/worldwide 1.png";
+import CountUp from "react-countup";
+import { useEffect } from "react";
 
-function MainSection() {
+function MainSection({ covidData, load }) {
+	console.log(covidData);
+	const confirmedCases = covidData.Global.TotalConfirmed;
+	const recoveredCases = covidData.Global.TotalRecovered;
+	const deathCases = covidData.Global.TotalDeaths;
+
 	return (
 		<div className="main">
 			<div className="main-section">
@@ -37,22 +44,54 @@ function MainSection() {
 			</div>
 			<div className="global-stats">
 				<div className="stat">
-					<h3 style={{ color: "red" }}>204</h3>
+					<h3 style={{ color: "red" }}>
+						<CountUp
+							style={{ color: "red" }}
+							start={0}
+							end={220}
+							duration={1.3}
+							separator=","
+						/>
+					</h3>
 					<span>Affected Countries</span>
 					<img src={affectedImg} alt="" />
 				</div>
 				<div className="stat">
-					<h3 style={{ color: "red" }}>1,098,233</h3>
+					<h3 style={{ color: "red" }}>
+						<CountUp
+							style={{ color: "red" }}
+							start={0}
+							end={confirmedCases}
+							duration={1.3}
+							separator=","
+						/>
+					</h3>
 					<span>Confirmed Cases</span>
 					<img src={confirmedImg} alt="" />
 				</div>
 				<div className="stat">
-					<h3 style={{ color: "green" }}>234,233</h3>
+					<h3 style={{ color: "green" }}>
+						<CountUp
+							style={{ color: "green" }}
+							start={0}
+							end={recoveredCases}
+							duration={1.3}
+							separator=","
+						/>
+					</h3>
 					<span>Recovered Cases</span>
 					<img src={recoveredImg} alt="" />
 				</div>
 				<div className="stat">
-					<h3 style={{ color: "red" }}>1,098,233</h3>
+					<h3 style={{ color: "red" }}>
+						<CountUp
+							style={{ color: "red" }}
+							start={0}
+							end={deathCases}
+							duration={1.3}
+							separator=","
+						/>
+					</h3>
 					<span>Global Deaths</span>
 					<img src={globalImage} alt="" />
 				</div>
