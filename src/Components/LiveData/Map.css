@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0 1.5rem;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: calc(110vh - 10vmax);
+  border: none;
+}
+
+.svg rect {
+  border: none;
+  outline: none;
+}
