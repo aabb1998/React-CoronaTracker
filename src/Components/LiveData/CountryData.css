@@ -1,6 +1,8 @@
 .country-dropdown {
 	width: 200px;
 	min-width: 200px;
+	display: flex;
+	flex-direction: column;
 }
 
 .data-container {
@@ -33,11 +35,24 @@
 	min-height: 100px;
 	margin: 0 50px 0 50px;
 	background-color: #f2f2f2;
-	border-radius: 15px;
-	border: 2px solid gray;
 }
 
 .totalCases h1 {
 	font-size: 17px;
 	text-align: center;
+}
+
+.latest-updates-section {
+	margin-top: 20px;
+	width: 200px;
+	height: 200px;
+	min-width: 100px;
+	min-height: 100px;
+	background-color: #f2f2f2;
+	text-align: center;
+}
+
+.dropdown {
+	color: red;
+	font-size: 13px;
 }
