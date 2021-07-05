@@ -32,3 +32,14 @@ svg {
 	border: 2px solid gray;
 	border-radius: 10px;
 }
+
+.leaflet-popup-content-wrapper {
+	box-shadow: 0 2px 2px 3px gray;
+	background-color: #f2f2f2;
+	text-align: center;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.leaflet-popup-content-wrapper h3 {
+	color: red;
+}

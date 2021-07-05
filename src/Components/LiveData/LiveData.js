@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ReactTooltip from "react-tooltip";
 import DataMap from "./DataMap";
 import LoadCountriesTask from "../../Tasks/LoadCountriesTask";
+import CountryData from "./CountryData";
 
 function LiveData({ dataCovid }) {
 	const [content, setContent] = useState("");
@@ -18,9 +19,14 @@ function LiveData({ dataCovid }) {
 	useEffect(load, []);
 
 	return (
-		<div className="data-map">
-			<DataMap countries={countries} covidData={dataCovid} />
-			<ReactTooltip>{content}</ReactTooltip>
+		<div className="container">
+			<div className="data-map">
+				<DataMap countries={countries} covidData={dataCovid} />
+				<ReactTooltip>{content}</ReactTooltip>
+			</div>
+			<div className="country-data">
+				<CountryData value={countries} data={dataCovid} />
+			</div>
 		</div>
 	);
 }

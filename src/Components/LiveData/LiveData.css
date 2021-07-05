@@ -1,6 +1,10 @@
 .data-map {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.country-data {
+	margin-bottom: 500px;
 }

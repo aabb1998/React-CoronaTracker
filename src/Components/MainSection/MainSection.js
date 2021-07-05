@@ -23,8 +23,12 @@ function MainSection({ covidDataMain }) {
 						<img src={covidAlert} alt="info" />
 					</div>
 					<div className="main-text">
-						<h2>Save yourself.</h2>
-						<h2 className="h2-text">Save the world.</h2>
+						<h2>
+							<span style={{ color: "red" }}>Stay</span> Home.
+						</h2>
+						<h2 className="h2-text">
+							Stay <span style={{ color: "red" }}>Safe.</span>
+						</h2>
 						<span>
 							Coronavirus disease (COVID-19) is an infectious
 							disease caused by a newly discovered coronavirus.

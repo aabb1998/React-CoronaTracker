@@ -13,8 +13,6 @@ function DataMap({ countries, covidData }) {
 
 	// console.log(countries[1].properties.ADMIN);
 
-	console.log(covidData);
-
 	const mapStyle = {
 		fillColor: "White",
 		weight: 1,
@@ -25,7 +23,6 @@ function DataMap({ countries, covidData }) {
 	const covidDataLength = covidData.Countries.length;
 
 	const getObject = (countryFound) => {
-		console.log(countryFound);
 		const objs = {
 			name: null,
 			TotalConfirmed: null,
@@ -56,7 +53,6 @@ function DataMap({ countries, covidData }) {
 				return null;
 			}
 		}
-		console.log(objs);
 		return objs;
 	};
 
@@ -116,7 +112,7 @@ function DataMap({ countries, covidData }) {
 							country !== undefined &&
 							details.name !== null
 							? `<h1>${details.name}</h1><span>Total Confirmed: ${details.TotalConfirmed}</span><br><span>Total Recovered: ${details.TotalRecovered}</span><br><span>Total Deaths: ${details.TotalDeaths}</span>`
-							: `<h1>"Not Found"</h1>`
+							: `<h3 className="h3-error">Error loading data</h3>`
 					);
 				}
 
