@@ -25,15 +25,39 @@ function DataMap({ countries, covidData }) {
 	const covidDataLength = covidData.Countries.length;
 
 	const getObject = (countryFound) => {
-		const objs = [];
+		console.log(countryFound);
+		const objs = {
+			name: null,
+			TotalConfirmed: null,
+			TotalRecovered: null,
+			TotalDeaths: null,
+		};
 		for (var i = 0; i < covidData.Countries.length; i++) {
-			if (covidData.Countries[i].Country === countryFound) {
-				const { Total } = covidData.Countries[i].TotalConfirmed;
-				console.log(Total);
-				return Total;
+			if (
+				covidData.Countries[i].Slug !== undefined &&
+				countryFound !== undefined
+			) {
+				if (
+					covidData.Countries[i].Slug.toLowerCase() ===
+					countryFound.toLowerCase()
+				) {
+					objs.name = countryFound;
+					objs.TotalConfirmed =
+						covidData.Countries[i].TotalConfirmed.toLocaleString();
+					objs.TotalRecovered =
+						covidData.Countries[i].TotalRecovered.toLocaleString();
+					objs.TotalDeaths =
+						covidData.Countries[i].TotalDeaths.toLocaleString();
+
+					console.log("found");
+					return objs;
+				}
+			} else {
+				return null;
 			}
 		}
-		return false;
+		console.log(objs);
+		return objs;
 	};
 
 	// if (getObject('Algeria'))
@@ -80,12 +104,26 @@ function DataMap({ countries, covidData }) {
 						}
 					}
 				}
-				let { collectedData } = getObject(country);
-				console.log({ collectedData });
+				// console.log(country);
+				let details = getObject(country);
+				console.log(details);
+
+				if (details === undefined) {
+					layer.bindPopup(`<h1>No Location Found</h1>`);
+				} else {
+					layer.bindPopup(
+						details !== null &&
+							country !== undefined &&
+							details.name !== null
+							? `<h1>${details.name}</h1><span>Total Confirmed: ${details.TotalConfirmed}</span><br><span>Total Recovered: ${details.TotalRecovered}</span><br><span>Total Deaths: ${details.TotalDeaths}</span>`
+							: `<h1>"Not Found"</h1>`
+					);
+				}
+
+				// </h1><span>${details.TotalConfirmed}</span>
+				return details;
 			});
 		});
-
-		layer.bindPopup(`<h1>${name}</h1><span>${name}</span>`);
 	};
 
 	return (
