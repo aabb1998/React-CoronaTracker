@@ -1,5 +1,6 @@
 import React from "react";
 import { Pie } from "react-chartjs-2";
+import "./CountryData.css";
 
 function PieChart({ countryData }) {
 	console.log(countryData);
@@ -22,15 +23,16 @@ function PieChart({ countryData }) {
 				],
 				backgroundColor: [
 					"rgb(255, 99, 132)",
-					"rgb(54, 162, 235)",
-					"rgb(255, 205, 86)",
+					"green",
+					"rgb(255, 0,0)",
+					"rgb(255,165,0)",
 				],
 				hoverOffset: 4,
 			},
 		],
 	};
 	return (
-		<div>
+		<div className="pieChartContainer">
 			<Pie data={data} />
 		</div>
 	);

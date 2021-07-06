@@ -1,4 +1,50 @@
 .header-container {
+}
+
+.open-menu-closed {
+	display: none;
+}
+
+.open-menu-open {
+	display: block;
+	height: 180px;
+	width: 150px;
+	max-width: 500px;
+	background-color: #f2f2f2;
+	position: relative;
+	transition: 0.5s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: auto auto auto 70px;
+}
+
+.link-container {
+	height: 50px;
+	padding: 10px;
+	width: 100%;
+	max-width: 413px;
+	text-decoration: none;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.link-container a:hover {
+	border-bottom: 2px black;
+}
+
+.link-container a {
+	text-decoration: none;
+	color: black;
+}
+
+.open-menu-open h1 {
+	color: black;
+	z-index: 100;
+}
+
+.nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -67,6 +113,9 @@
 .logo {
 	height: 45px;
 	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .menu-btn {
@@ -76,6 +125,7 @@
 	align-items: center;
 	display: none;
 	cursor: pointer;
+	margin-right: 5px;
 }
 
 .emergency {
@@ -128,7 +178,7 @@
 }
 
 @media screen and (max-width: 260px) {
-	.header-container {
+	.nav {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;

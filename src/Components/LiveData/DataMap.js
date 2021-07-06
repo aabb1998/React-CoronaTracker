@@ -11,8 +11,6 @@ import "./Map.css";
 function DataMap({ countries, covidData }) {
 	const [data, setData] = useState([]);
 
-	// console.log(countries[1].properties.ADMIN);
-
 	const mapStyle = {
 		fillColor: "White",
 		weight: 1,
@@ -28,6 +26,9 @@ function DataMap({ countries, covidData }) {
 			TotalConfirmed: null,
 			TotalRecovered: null,
 			TotalDeaths: null,
+			newConfirmed: null,
+			newDeaths: null,
+			newRecovered: null,
 		};
 		for (var i = 0; i < covidData.Countries.length; i++) {
 			if (
@@ -56,7 +57,6 @@ function DataMap({ countries, covidData }) {
 		return objs;
 	};
 
-	// if (getObject('Algeria'))
 	Geocode.setApiKey("AIzaSyDWUQxPTjsIEo2CIG1C5XSyXXgqzcHCTr4");
 
 	const onEachCountry = (country, layer) => {
