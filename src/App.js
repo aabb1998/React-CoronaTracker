@@ -7,6 +7,7 @@ import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import Loading from "./Components/Loading/Loading";
 import LiveData from "./Components/LiveData/LiveData";
+import Symptoms from "./Components/Symptoms/Symptoms";
 
 function App() {
 	const [data, setData] = useState();
@@ -43,6 +44,9 @@ function App() {
 								) : (
 									<Loading />
 								)}
+							</Route>
+							<Route path="/symptoms">
+								<Symptoms />
 							</Route>
 							<Route path="/">
 								{data !== undefined ? (

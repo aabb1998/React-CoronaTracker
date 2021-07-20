@@ -1,0 +1,37 @@
+.main-symptom-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex: 0.7;
+}
+
+.text-section {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+}
+
+.text-section h2 {
+	font-size: 50px;
+	text-align: center;
+	align-items: center;
+}
+
+.left-side {
+	display: flex;
+	flex-direction: column;
+	flex: 0.6;
+	margin-top: -100px;
+	align-items: center;
+	text-align: center;
+	align-content: center;
+}
+
+.main-img img {
+	height: auto;
+	margin-top: 50px;
+}

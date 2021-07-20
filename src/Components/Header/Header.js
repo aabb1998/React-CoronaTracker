@@ -36,7 +36,7 @@ function Header() {
 							<a href="/livedata">Live Data</a>
 						</li>
 						<li>
-							<a href="/">Symptoms</a>
+							<a href="/symptoms">Symptoms</a>
 						</li>
 						<li>
 							<a href="/">Prevention</a>
@@ -59,10 +59,10 @@ function Header() {
 					<a href="/about">About</a>
 				</div>
 				<div className="link-container">
-					<a href="/about">Live Data</a>
+					<a href="/livedata">Live Data</a>
 				</div>
 				<div className="link-container">
-					<a href="/about">Symptoms</a>
+					<a href="/symptoms">Symptoms</a>
 				</div>
 				<div className="link-container">
 					<a href="/about">Prevention</a>
