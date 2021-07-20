@@ -25,6 +25,8 @@ function App() {
 		getData();
 	}, []);
 
+	console.log(data);
+
 	return (
 		<Router>
 			<div className="App">
