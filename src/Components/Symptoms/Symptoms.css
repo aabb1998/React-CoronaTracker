@@ -35,3 +35,34 @@
 	height: auto;
 	margin-top: 50px;
 }
+
+.symptoms-info-section {
+	display: flex;
+	flex-direction: column;
+	margin-top: 100px;
+}
+
+.main-symptom-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.common-info {
+	background-color: beige;
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	border-radius: 14px;
+	padding: 15px;
+	background-color: #f2f2f2;
+}
+
+.common-info-severe {
+	background-color: rgba(255, 38, 0, 0.767);
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	border-radius: 14px;
+	padding: 15px;
+}
